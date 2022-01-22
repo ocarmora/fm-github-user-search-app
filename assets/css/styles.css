@@ -91,7 +91,7 @@ main .search-container i {
   width: 20px;
   height: 20px;
   background-position: center center;
-  background-size: cover;
+  background-size: contain;
   background-image: url("../images/icon-search.svg");
 }
 main .search-container .search-input {
