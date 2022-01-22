@@ -4,72 +4,78 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
   <link rel="stylesheet" href="assets/css/styles.css">
   
   <title>Frontend Mentor | GitHub user search app</title>
 </head>
-<body class="">
+<body id="app" class="">
 
   <header class="container">
     <h1 class="logo">devfinder</h1>
     <div class="theme-switch">
-      <span id="theme-light" style="display: none;">Light <i class="icon-theme light"></i></span>
-      <span id="theme-dark">Dark <i class="icon-theme dark"></i></span>
+      <span id="theme-light" class="theme-switcher" style="display: none;">Light <i class="icon-theme light"></i></span>
+      <span id="theme-dark" class="theme-switcher">Dark <i class="icon-theme dark"></i></span>
     </div>
   </header>
 
   <main class="container">
     <div class="search-container">
-      <i class="search-icon"></i>
-      <input type="text" class="search-input" placeholder="Search GitHub username...">
-      <span class="user-not-found">No results</span>
-      <button type="button" class="search-button">Search</button>
+      <form id="user-search-form" autocomplete="off">
+        <i class="search-icon"></i>
+        <input type="text" name="username" class="search-input" placeholder="Search GitHub username..." value="oscarvajalmora">
+        <span class="user-not-found">No results</span>
+        <button type="submit" class="search-button">Search</button>
+      </form>
     </div>
 
-    <div class="user-container">
-      <img src="https://i.picsum.photos/id/5/200/200.jpg?hmac=oN9VtXdJYLSFssji8vCr48JaI-e5Zi4eH9GAiYBB_Ig" alt="User avatar" class="user-avatar">
+    <div class="user-container" style="display: none;">
+      <img src="https://i.picsum.photos/id/5/200/200.jpg?hmac=oN9VtXdJYLSFssji8vCr48JaI-e5Zi4eH9GAiYBB_Ig" alt="User avatar" class="user-avatar" id="__data-user-avatar">
 
       <div class="user-info">
-        <h3>The Octocat</h3>
-        <span class="username">@ctocat</span>
-        <span class="date-joined">Joined 25 Jan 2011</span>
+        <h3 id="__data-user-title">The Octocat</h3>
+        <span id="__data-username" class="username">@ctocat</span>
+        <span id="__data-user-date-joined" class="date-joined">Joined 25 Jan 2011</span>
       </div>
 
-      <p class="user-bio">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.</p>
+      <p id="__data-user-bio" class="user-bio">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.</p>
 
       <div class="user-stats">
         <div class="stats">
           <h4>Repos</h4>
-          <span>8</span>
+          <span id="__data-repo-count">8</span>
         </div>
         <div class="stats">
           <h4>Followers</h4>
-          <span>3938</span>
+          <span id="__data-followers-count">3938</span>
         </div>
         <div class="stats">
           <h4>Following</h4>
-          <span>9</span>
+          <span id="__data-following-count">9</span>
         </div>
       </div>
 
       <div class="user-social">
         <div class="social user-location">
-          <i class="icon-social location"></i> San Francisco
+          <i class="icon-social location"></i>
+          <span id="__data-user-location"></span>
         </div>
         <div class="social user-webpage">
-          <i class="icon-social webpage"></i> https://github.blog
+          <i class="icon-social webpage"></i>
+          <span id="__data-user-webpage"></span>
         </div>
-        <div class="social user-twitter not-available">
-          <i class="icon-social twitter"></i> Not Available
+        <div class="social user-twitter">
+          <i class="icon-social twitter"></i>
+          <span id="__data-user-twitter"></span>
         </div>
         <div class="social user-company">
-          <i class="icon-social company"></i> @gitHub
+          <i class="icon-social company"></i>
+          <span id="__data-user-company"></span>
         </div>
       </div>
 
     </div>
   </main>
-  
+  <script src="assets/js/app.js"></script>
 </body>
 </html>

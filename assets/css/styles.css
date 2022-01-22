@@ -94,14 +94,16 @@ header .theme-switch i.light {
   margin-top: 36px;
   background-color: var(--content-background);
   border-radius: 15px;
+  padding: 7px;
+  box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.198567);
+}
+.search-container form {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 7px;
-  box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.198567);
   position: relative;
 }
-.search-container i {
+.search-container form i {
   display: inline-block;
   margin-left: 16px;
   width: 20px;
@@ -111,24 +113,25 @@ header .theme-switch i.light {
   background-image: url("../images/icon-search.svg");
   background-repeat: no-repeat;
 }
-.search-container .search-input {
+.search-container form .search-input {
   margin: 0 9px;
   border: none;
   flex-grow: 1;
   line-height: 25px;
+  color: var(--color-tertiary);
   caret-color: var(--color-primary);
   background-color: transparent;
 }
-.search-container .search-input::placeholder {
+.search-container form .search-input::placeholder {
   color: var(--color-primary);
   font-size: 13px;
   opacity: 1;
   position: relative;
 }
-.search-container .search-input:focus {
+.search-container form .search-input:focus {
   outline: none;
 }
-.search-container .user-not-found {
+.search-container form .user-not-found {
   display: none;
   position: absolute;
   right: 30%;
@@ -136,7 +139,7 @@ header .theme-switch i.light {
   font-weight: 700;
   font-size: 15px;
 }
-.search-container button {
+.search-container form button {
   border: none;
   border-radius: 10px;
   padding: 12.5px 16px;
@@ -146,7 +149,7 @@ header .theme-switch i.light {
   font-size: 14px;
   cursor: pointer;
 }
-.search-container button:hover {
+.search-container form button:hover {
   background-color: #60ABFF;
 }
 
@@ -219,6 +222,13 @@ header .theme-switch i.light {
   display: flex;
   margin-bottom: 15px;
 }
+.user-container .user-social .social a {
+  text-decoration: none;
+  color: inherit;
+}
+.user-container .user-social .social a:hover {
+  text-decoration: underline;
+}
 .user-container .user-social .not-available {
   opacity: 0.5;
 }
@@ -267,17 +277,17 @@ header .theme-switch i.light {
   .search-container {
     padding: 10px;
   }
-  .search-container .search-input {
+  .search-container form .search-input {
     margin: 0 24px;
     font-size: 18px;
   }
-  .search-container .search-input::placeholder {
+  .search-container form .search-input::placeholder {
     font-size: 18px;
   }
-  .search-container .user-not-found {
+  .search-container form .user-not-found {
     right: 22%;
   }
-  .search-container button {
+  .search-container form button {
     padding: 12.5px 23px;
     font-size: 16px;
   }
