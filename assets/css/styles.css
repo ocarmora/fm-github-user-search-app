@@ -30,7 +30,8 @@ body {
   flex-direction: column;
   align-items: center;
   background-color: var(--body-background);
-  height: 80vh;
+  min-height: 100vh;
+  justify-content: center;
 }
 
 .container {
@@ -251,10 +252,6 @@ header .theme-switch i.light {
 }
 
 @media screen and (min-width: 768px) {
-  body {
-    justify-content: center;
-  }
-
   h3 {
     font-size: 26px;
   }
