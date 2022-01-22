@@ -299,7 +299,12 @@ header {
 
 }
 
+// Scheme styles
+@media (prefers-color-scheme: dark) {
+    .search-container, .user-container { box-shadow: none;}
+}
 
+// Tablet styles
 @media screen and (min-width: 768px) {
 
     h3 {
@@ -403,7 +408,7 @@ header {
     }
 }
 
-
+// Desktop styles
 @media screen and (min-width: 1440px) {
     
     .container {

@@ -261,6 +261,11 @@ header .theme-switch i.light {
   -webkit-mask-image: url("../images/icon-company.svg");
 }
 
+@media (prefers-color-scheme: dark) {
+  .search-container, .user-container {
+    box-shadow: none;
+  }
+}
 @media screen and (min-width: 768px) {
   h3 {
     font-size: 26px;

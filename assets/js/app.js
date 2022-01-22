@@ -1,9 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
     const GITHUB_API_USER_ENDPOINT = 'https://api.github.com/users';
+
+    // Form elements
     const userSearchForm = document.querySelector('#user-search-form');
     const userSearchFormFeedback = document.querySelector('.user-not-found');
 
-    // user data
+    // Element to populate with user data
     const userTitle = document.querySelector('#__data-user-title');
     const userAvatar = document.querySelector('#__data-user-avatar');
     const userName = document.querySelector('#__data-username');
@@ -17,6 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const userTwitter = document.querySelector('#__data-user-twitter');
     const userCompany = document.querySelector('#__data-user-company');
 
+    // Show or hide user data container
     const showUserData = (show) => {
         const dataContainer = document.querySelector('.user-container');
 
@@ -27,15 +30,18 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    // Set form errors when user not found
     const setFormError = () => {
         userSearchFormFeedback.style.display = 'inline-block';
         showUserData(false);
     }
 
+    // Clean form errors
     const cleanFormError = () => {
         userSearchFormFeedback.style.display = 'none';
     }
 
+    // Fetch Github user data by username
     const fetchUserData = (username) => {
         fetch(`${GITHUB_API_USER_ENDPOINT}/${username}`)
         .then(response => response.json())
@@ -79,9 +85,19 @@ document.addEventListener('DOMContentLoaded', () => {
         .catch(error => console.log(error));
     }
 
+    // Toggle between dark and light theme
+    const toggleColorScheme = () => {
+        const bodyTag = document.getElementById('app');
+        bodyTag.classList.toggle('dark-theme');
 
-    (fetchUserData('oscarvajalmora'));
+        const lightThemeSwitch = document.querySelector('#theme-light');
+        const darkThemeSwitch = document.querySelector('#theme-dark');
 
+        darkThemeSwitch.style.display = window.getComputedStyle(darkThemeSwitch).display === 'flex' ? 'none' : '';
+        lightThemeSwitch.style.display = window.getComputedStyle(lightThemeSwitch).display === 'flex' ? 'none' : '';
+    }
+
+    // Event listener for form submit
     userSearchForm.addEventListener('submit', (event) => {
         event.preventDefault();
         const searchValue = event.target['username'].value;
@@ -89,20 +105,17 @@ document.addEventListener('DOMContentLoaded', () => {
         fetchUserData(searchValue);
     });
 
-    
-    // Theme switch
+    // Event listener for theme switch
     const themeSwitchers = document.querySelectorAll('.theme-switcher');
     themeSwitchers.forEach(element => {
-        element.addEventListener('click', () => {
-            const bodyTag = document.getElementById('app');
-            bodyTag.classList.toggle('dark-theme');
-
-            const lightThemeSwitch = document.querySelector('#theme-light');
-            const darkThemeSwitch = document.querySelector('#theme-dark');
-
-            darkThemeSwitch.style.display = window.getComputedStyle(darkThemeSwitch).display === 'flex' ? 'none' : '';
-            lightThemeSwitch.style.display = window.getComputedStyle(lightThemeSwitch).display === 'flex' ? 'none' : '';
-        });
+        element.addEventListener('click', toggleColorScheme);
     });
 
+    // Set prefered color scheme as default
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        toggleColorScheme();
+    }
+    
+    // Fetch default data
+    (fetchUserData('oscarvajalmora')); 
 });
