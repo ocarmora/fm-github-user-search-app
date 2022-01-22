@@ -32,6 +32,7 @@ body {
   flex-direction: column;
   align-items: center;
   background-color: var(--body-background);
+  height: 80vh;
 }
 
 .container {
@@ -273,6 +274,11 @@ header {
 
 
 @media screen and (min-width: 768px) {
+
+    body {
+        justify-content: center;
+    }
+
     h3 {
         font-size: 26px;
     }
@@ -299,6 +305,7 @@ header {
         
         button {
             padding: 12.5px 23px;
+            font-size: 16px;
         }
     }
 
@@ -311,6 +318,10 @@ header {
         }
 
         .user-info {
+            span.username {
+                font-size: 16px;
+            }
+
             span.date-joined {
                 margin-top: 4px;
             }
@@ -357,6 +368,62 @@ header {
             .social {
                 flex-basis: 50%;
             }
+        }
+
+    }
+}
+
+
+@media screen and (min-width: 1440px) {
+    
+    .container {
+        max-width: 730px;
+    }
+
+    .user-container {
+        padding: 48px;
+        font-size: 15px;
+        grid-template-columns: 25% 75%;
+        
+        .user-avatar {
+            align-self: start;
+            grid-area: 1 / 1 / -1 / 1;
+        }
+
+        .user-info {
+            padding-left: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            h3 {
+                order: 0;
+                width: 50%;
+            }
+
+            span.date-joined {
+                order: 1;
+                width: 50%;
+                text-align: right;
+            }
+
+            span.username {
+                order: 2;
+                margin-top: 2px;
+            }
+        }
+
+        .user-bio {
+            grid-area: 2 / 2 / 2 / -1;
+        }
+
+        .user-stats {
+            grid-area: 3 / 2 / 3 / -1;
+        }
+
+        .user-social {
+            margin-top: 37px;
+            grid-area: 4 / 2 / 4 / -1;
         }
 
     }

@@ -30,6 +30,7 @@ body {
   flex-direction: column;
   align-items: center;
   background-color: var(--body-background);
+  height: 80vh;
 }
 
 .container {
@@ -235,6 +236,10 @@ header .theme-switch i.light {
   mask-image: url("../images/icon-company.svg");
 }
 @media screen and (min-width: 768px) {
+  body {
+    justify-content: center;
+  }
+
   h3 {
     font-size: 26px;
   }
@@ -259,6 +264,7 @@ header .theme-switch i.light {
   }
   .search-container button {
     padding: 12.5px 23px;
+    font-size: 16px;
   }
 
   .user-container {
@@ -267,6 +273,9 @@ header .theme-switch i.light {
   }
   .user-container .user-avatar {
     width: 117px;
+  }
+  .user-container .user-info span.username {
+    font-size: 16px;
   }
   .user-container .user-info span.date-joined {
     margin-top: 4px;
@@ -303,6 +312,50 @@ header .theme-switch i.light {
   }
   .user-container .user-social .social {
     flex-basis: 50%;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .container {
+    max-width: 730px;
+  }
+
+  .user-container {
+    padding: 48px;
+    font-size: 15px;
+    grid-template-columns: 25% 75%;
+  }
+  .user-container .user-avatar {
+    align-self: start;
+    grid-area: 1/1/-1/1;
+  }
+  .user-container .user-info {
+    padding-left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .user-container .user-info h3 {
+    order: 0;
+    width: 50%;
+  }
+  .user-container .user-info span.date-joined {
+    order: 1;
+    width: 50%;
+    text-align: right;
+  }
+  .user-container .user-info span.username {
+    order: 2;
+    margin-top: 2px;
+  }
+  .user-container .user-bio {
+    grid-area: 2/2/2/-1;
+  }
+  .user-container .user-stats {
+    grid-area: 3/2/3/-1;
+  }
+  .user-container .user-social {
+    margin-top: 37px;
+    grid-area: 4/2/4/-1;
   }
 }
 
