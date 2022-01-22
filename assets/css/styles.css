@@ -246,7 +246,7 @@ header .theme-switch i.light {
 }
 .user-container .user-social .company {
   mask-image: url("../images/icon-company.svg");
-  -webkit-mask-image: url("../images/icon-twitter.svg");
+  -webkit-mask-image: url("../images/icon-company.svg");
 }
 @media screen and (min-width: 768px) {
   body {
