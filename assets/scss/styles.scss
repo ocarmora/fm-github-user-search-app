@@ -1,17 +1,28 @@
 @import '_typography';
 
+:root {
+  --body-background: #F6F8FF;
+  --content-background: #FEFEFE;
+  --color-primary: #4B6A9B;
+  --color-secondary: #697C9A;
+  --color-tertiary: #2B3442;
+  --color-highlight: #0079FF;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Space Mono", monospace;
   font-weight: 400;
+}
 
-  --body-background: #F6F8FF;
-  --content-background: #FEFEFE;
-  --color-primary: #4B6A9B;
-  --color-secondary: #697C9A;
-  --color-tertiary: #2B3442;
+.dark-theme {
+  --body-background: #141D2F;
+  --content-background: #1E2A47;
+  --color-primary: #FFFFFF;
+  --color-secondary: #FFFFF;
+  --color-tertiary: #FFFFFF;
   --color-highlight: #0079FF;  
 }
 
@@ -19,7 +30,6 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  
   background-color: var(--body-background);
 }
 
@@ -111,6 +121,7 @@ main {
             flex-grow: 1;
             line-height: 25px;
             caret-color: var(--color-primary);
+            background-color: transparent;
 
             &::placeholder {
                 color: var(--color-primary);
@@ -226,26 +237,29 @@ main {
                 display: inline-block;
                 width: 20px;
                 height: 20px;
-                background-position: center center;
-                background-size: contain;
-                background-repeat: no-repeat;
                 margin-right: 15px;
+                background-color: var(--color-primary);
+                mask-repeat: no-repeat;
+                mask-position: center;
             }
 
             .location {
-                background-image: url('../images/icon-location.svg');
+                background-color: var(--color-primary);
+                mask-image: url('../images/icon-location.svg');
+                mask-repeat: no-repeat;
+                mask-position: center;
             }
 
             .webpage {
-                background-image: url('../images/icon-website.svg');
+                mask-image: url('../images/icon-website.svg');
             }
 
             .twitter {
-                background-image: url('../images/icon-twitter.svg');
+                mask-image: url('../images/icon-twitter.svg');
             }
 
             .company {
-                background-image: url('../images/icon-company.svg');
+                mask-image: url('../images/icon-company.svg');
             }
 
             .user {
