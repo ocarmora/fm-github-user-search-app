@@ -108,6 +108,7 @@ header .theme-switch i.light {
   background-position: center center;
   background-size: contain;
   background-image: url("../images/icon-search.svg");
+  background-repeat: no-repeat;
 }
 .search-container .search-input {
   margin: 0 9px;
@@ -248,6 +249,7 @@ header .theme-switch i.light {
   mask-image: url("../images/icon-company.svg");
   -webkit-mask-image: url("../images/icon-company.svg");
 }
+
 @media screen and (min-width: 768px) {
   body {
     justify-content: center;

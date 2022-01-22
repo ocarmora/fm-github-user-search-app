@@ -116,6 +116,7 @@ header {
         background-position: center center;
         background-size: contain;
         background-image: url('../images/icon-search.svg');
+        background-repeat: no-repeat;
     }
 
     .search-input {
@@ -278,9 +279,6 @@ header {
         .company {
             mask-image: url('../images/icon-company.svg');
             -webkit-mask-image: url('../images/icon-company.svg');
-        }
-
-        .user {
         }
     }
 
