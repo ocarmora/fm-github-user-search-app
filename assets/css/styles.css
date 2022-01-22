@@ -1,3 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Space Mono", monospace;
+  --body-background: #F6F8FF;
+  --content-background: #FEFEFE;
+  --color-primary: #4B6A9B;
+  --color-secondary: #697C9A;
+  --color-tertiary: #2B3442;
+  --color-highlight: #0079FF;
+}
 
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--body-background);
+}
+
+.container {
+  width: 100%;
+  max-width: 327px;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 26px;
+  line-height: 38px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 31px;
+}
+header .theme-switch span {
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+}
+header .theme-switch i.icon-theme {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-position: center center;
+  background-size: cover;
+  margin-left: 1em;
+}
+header .theme-switch i.dark {
+  background-image: url("../images/icon-moon.svg");
+}
+header .theme-switch i.light {
+  background-image: url("../images/icon-sun.svg");
+}
 
 /*# sourceMappingURL=styles.css.map */
