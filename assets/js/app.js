@@ -72,10 +72,10 @@ document.addEventListener('DOMContentLoaded', () => {
             userCompany.textContent = data.company ? data.company : 'Not Available';
 
             [userLocation, userTwitter, userWebpage, userCompany].map(element => {
-                element.classList.remove('not-available');
+                element.parentElement.classList.remove('not-available');
 
                 if(element.innerHTML.includes('Not Available')) {
-                    element.classList.add('not-available');
+                    element.parentElement.classList.add('not-available');
                 }
             });
 
