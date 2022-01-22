@@ -255,25 +255,29 @@ header {
             background-color: var(--color-primary);
             mask-repeat: no-repeat;
             mask-position: center;
+            -webkit-mask-repeat: no-repeat;
+            -webkit-mask-position: center;
         }
 
         .location {
             background-color: var(--color-primary);
             mask-image: url('../images/icon-location.svg');
-            mask-repeat: no-repeat;
-            mask-position: center;
+            -webkit-mask-image: url('../images/icon-location.svg');
         }
 
         .webpage {
             mask-image: url('../images/icon-website.svg');
+            -webkit-mask-image: url('../images/icon-website.svg');
         }
 
         .twitter {
             mask-image: url('../images/icon-twitter.svg');
+            -webkit-mask-image: url('../images/icon-twitter.svg');
         }
 
         .company {
             mask-image: url('../images/icon-company.svg');
+            -webkit-mask-image: url('../images/icon-twitter.svg');
         }
 
         .user {

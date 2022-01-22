@@ -228,21 +228,25 @@ header .theme-switch i.light {
   background-color: var(--color-primary);
   mask-repeat: no-repeat;
   mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
 }
 .user-container .user-social .location {
   background-color: var(--color-primary);
   mask-image: url("../images/icon-location.svg");
-  mask-repeat: no-repeat;
-  mask-position: center;
+  -webkit-mask-image: url("../images/icon-location.svg");
 }
 .user-container .user-social .webpage {
   mask-image: url("../images/icon-website.svg");
+  -webkit-mask-image: url("../images/icon-website.svg");
 }
 .user-container .user-social .twitter {
   mask-image: url("../images/icon-twitter.svg");
+  -webkit-mask-image: url("../images/icon-twitter.svg");
 }
 .user-container .user-social .company {
   mask-image: url("../images/icon-company.svg");
+  -webkit-mask-image: url("../images/icon-twitter.svg");
 }
 @media screen and (min-width: 768px) {
   body {
