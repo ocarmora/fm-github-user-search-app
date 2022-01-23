@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
             
             userLocation.textContent = data.location ? data.location : 'Not Available';
             userTwitter.textContent = data.twitter_username ? data.twitter_username : 'Not Available';
-            userWebpage.innerHTML = data.blog ? `<a href="${data.blog}">${data.blog}</a>` : 'Not Available';
+            userWebpage.innerHTML = data.blog ? `<a href="${data.blog}" target="_blank">${data.blog}</a>` : 'Not Available';
             userCompany.textContent = data.company ? data.company : 'Not Available';
 
             [userLocation, userTwitter, userWebpage, userCompany].map(element => {
