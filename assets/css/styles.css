@@ -279,6 +279,10 @@ header .theme-switch i.light {
   .search-container {
     padding: 10px;
   }
+  .search-container form i {
+    width: 24px;
+    height: 24px;
+  }
   .search-container form .search-input {
     margin: 0 24px;
     font-size: 18px;
@@ -364,6 +368,7 @@ header .theme-switch i.light {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    align-items: baseline;
   }
   .user-container .user-info h3 {
     order: 0;

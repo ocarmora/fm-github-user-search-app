@@ -320,6 +320,12 @@ header {
         padding: 10px;
 
         form {
+
+            i {
+                width: 24px;
+                height: 24px;
+            }
+
             .search-input {
                 margin: 0 24px;
                 font-size: 18px;
@@ -411,8 +417,7 @@ header {
     .container {
         max-width: 730px;
     }
-
-
+    
     .search-container {
         .user-not-found {
             right: 18%;
@@ -433,6 +438,7 @@ header {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
+            align-items: baseline;
 
             h3 {
                 order: 0;
