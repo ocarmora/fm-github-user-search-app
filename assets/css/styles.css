@@ -21,9 +21,8 @@
   --body-background: #141D2F;
   --content-background: #1E2A47;
   --color-primary: #FFFFFF;
-  --color-secondary: #FFFFF;
+  --color-secondary: #FFFFFF;
   --color-tertiary: #FFFFFF;
-  --color-highlight: #0079FF;
   --box-shadow: none;
 }
 
@@ -33,6 +32,7 @@ body {
   align-items: center;
   background-color: var(--body-background);
   min-height: 100vh;
+  transition: all 0.5s;
 }
 
 .container {
@@ -44,6 +44,7 @@ body {
 h1, h3 {
   font-weight: 700;
   color: var(--color-tertiary);
+  transition: all 0.5s;
 }
 
 h1 {
@@ -70,6 +71,7 @@ header .theme-switch span {
   letter-spacing: 2.5px;
   text-transform: uppercase;
   color: var(--color-primary);
+  transition: all 0.5s;
   display: flex;
   align-items: center;
   font-size: 13px;
@@ -97,6 +99,7 @@ header .theme-switch i.light {
   border-radius: 15px;
   padding: 7px;
   box-shadow: var(--box-shadow);
+  transition: all 0.5s;
 }
 .search-container form {
   display: flex;
@@ -121,10 +124,12 @@ header .theme-switch i.light {
   line-height: 25px;
   color: var(--color-tertiary);
   caret-color: var(--color-primary);
+  transition: all 0.5s;
   background-color: transparent;
 }
 .search-container form .search-input::placeholder {
   color: var(--color-primary);
+  transition: all 0.5s;
   font-size: 13px;
   opacity: 1;
   position: relative;
@@ -145,6 +150,7 @@ header .theme-switch i.light {
   border-radius: 10px;
   padding: 12.5px 16px;
   background-color: var(--color-highlight);
+  transition: all 0.5s;
   color: #FFFFFF;
   font-weight: 700;
   font-size: 14px;
@@ -156,6 +162,7 @@ header .theme-switch i.light {
 
 .user-container {
   background-color: var(--content-background);
+  transition: all 0.5s;
   border-radius: 15px;
   margin-top: 16px;
   padding: 32px 24px;
@@ -165,6 +172,7 @@ header .theme-switch i.light {
   font-size: 13px;
   color: var(--color-primary);
   box-shadow: var(--box-shadow);
+  transition: all 0.5s;
   align-items: center;
 }
 .user-container .user-avatar {
@@ -182,19 +190,23 @@ header .theme-switch i.light {
 }
 .user-container .user-info span.username {
   color: var(--color-highlight);
+  transition: all 0.5s;
 }
 .user-container .user-info span.date-joined {
   color: var(--color-secondary);
+  transition: all 0.5s;
 }
 .user-container .user-bio {
   grid-area: 2/1/3/-1;
   margin-top: 33px;
   line-height: 25px;
   color: var(--color-primary);
+  transition: all 0.5s;
 }
 .user-container .user-stats {
   grid-area: 3/1/4/-1;
   background-color: var(--body-background);
+  transition: all 0.5s;
   display: flex;
   justify-content: space-around;
   padding: 18px 15px;
@@ -211,6 +223,7 @@ header .theme-switch i.light {
   font-size: 16px;
   font-weight: 700;
   color: var(--color-tertiary);
+  transition: all 0.5s;
   margin-top: 8px;
 }
 .user-container .user-social {
@@ -239,6 +252,7 @@ header .theme-switch i.light {
   height: 20px;
   margin-right: 15px;
   background-color: var(--color-primary);
+  transition: all 0.5s;
   mask-repeat: no-repeat;
   mask-position: center;
   -webkit-mask-repeat: no-repeat;
@@ -246,6 +260,7 @@ header .theme-switch i.light {
 }
 .user-container .user-social .location {
   background-color: var(--color-primary);
+  transition: all 0.5s;
   mask-image: url("../images/icon-location.svg");
   -webkit-mask-image: url("../images/icon-location.svg");
 }
@@ -304,6 +319,7 @@ header .theme-switch i.light {
   .user-container {
     padding: 40px;
     font-size: 15px;
+    margin-top: 24px;
   }
   .user-container .user-avatar {
     width: 117px;
