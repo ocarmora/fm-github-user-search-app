@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Set form errors when user not found
     const setFormError = () => {
         userSearchFormFeedback.style.display = 'inline-block';
-        showUserData(false);
+        // showUserData(false);
     }
 
     // Clean form errors

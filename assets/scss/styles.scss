@@ -35,7 +35,6 @@ body {
   align-items: center;
   background-color: var(--body-background);
   min-height: 100vh;
-  justify-content: center;
 }
 
 .container {
@@ -310,6 +309,10 @@ header {
 
     h4 {
         font-size: 13px;
+    }
+
+    body {
+        justify-content: center;
     }
     
     .container {
